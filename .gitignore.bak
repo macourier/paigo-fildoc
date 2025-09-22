@@ -20,8 +20,3 @@
 # OS junk
 .DS_Store
 Thumbs.db
-.env
-/storage/*.key
-.phpunit.cache
-*.sqlite
-*_cookies*.txt
