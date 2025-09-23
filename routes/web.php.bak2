@@ -1,7 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+Route::redirect('/admin/dashboard', '/admin', 301);
 use Filament\Pages\Auth\Login as FilamentLogin;
+
+Route::redirect('/admin/dashboard', '/admin', 301);
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,6 +29,7 @@ Route::middleware(['web'])->prefix('admin')->group(function () {
 
 Route::middleware(['web','auth'])->prefix('admin')->group(function () {
     Route::get('home', function () {
-        return redirect('/admin');
+        return response('Bienvenue dans le panneau Filament.', 200);
     })->name('filament.admin.home');
 });
+
